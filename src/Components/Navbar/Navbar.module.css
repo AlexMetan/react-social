@@ -4,9 +4,15 @@
     padding: 20px;
 }
 nav .item a{
+    background-color: #5b626b;
     color: #fff;
+    display: block;
+    padding: 15px;
+    margin-bottom: 5px;
     text-decoration: none;
+    border-radius: 5px;
 }
 nav .item a[class="active"]{
-    color: #603e70;
+    font-weight: 700;
+    text-decoration: underline;
 }

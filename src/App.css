@@ -11,3 +11,6 @@
   grid-area: c;
   background-color: #aeacb4;
 }
+*:focus{
+  outline: none;
+}

@@ -22,6 +22,7 @@
     background-color: #f3f8ff;
     max-width: 300px;
     display: inline-block;
+    overflow-wrap: break-word;
 }
 .messages .messageBox {
     margin-bottom: 15px;

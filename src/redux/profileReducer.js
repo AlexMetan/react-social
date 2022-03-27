@@ -10,7 +10,6 @@ let initialState = {
 };
 
 const profileReducer = (state = initialState, action) => {
-    debugger
     switch (action.type){
         case ADD_POST:{
             let newPost = {
@@ -35,13 +34,13 @@ const profileReducer = (state = initialState, action) => {
     }
 }
 
-export const addPostActionCreator = () =>{
+export const addPostAC = () =>{
     return {
         type:ADD_POST
     }
 }
 
-export const updateNewPostTextActionCreator = (newText) => {
+export const updateNewPostTextAC = (newText) => {
     return {
         type:UPDATE_NEW_POST_TEXT,
         newText

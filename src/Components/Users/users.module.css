@@ -4,3 +4,12 @@
 .selecedPage{
     font-weight: 700;
 }
+.paginations{
+    margin: 30px 0;
+}
+.paginations span{
+    background-color: #ccc;
+    margin: 0 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+}

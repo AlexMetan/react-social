@@ -18,9 +18,19 @@ export const usersAPI = {
     },
     unFollowUser(userId){
         return instance.delete(`follow/${userId}`).then(response => response.data); 
-    },
+    }
+   
+}
+
+export const profileAPI = {
     getUserProfile(userId){
         return instance.get(`profile/${userId}`).then(response => response.data);
+    },
+    getStatus(userId){
+        return instance.get(`profile/status/${userId}`)
+    }, 
+    setStatus(status){
+        return instance.put(`profile/status`,{status}).then(response => response.data);
     }
 }
 

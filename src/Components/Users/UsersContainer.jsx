@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { toggleIsFetchingAC, toggleIsFollowingAC, unFollowTC, getUsersTC, followTC } from "../../redux/usersReducer";
 import Users from "./Users";
-import Preloader from "../../Common/Preloader/Preloader";
+import Preloader from "../Common/Preloader/Preloader";
 import withAuthRedirect from "../../hoc/withAuthRedirect";
 import { compose } from "redux";
 

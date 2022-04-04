@@ -7,11 +7,10 @@ import MyPosts from './MyPosts';
 
 let mapStateToProps = state =>{
     return {
-        posts: state.profilePage.posts,
-        newPostText: state.profilePage.newPostText
+        posts: state.profilePage.posts
     }
 }
 
-const MyPostsContainer = connect(mapStateToProps,{addPost:addPostAC,updateNewPostText:updateNewPostTextAC})(MyPosts);
+const MyPostsContainer = connect(mapStateToProps,{addPost:addPostAC})(MyPosts);
 
 export default MyPostsContainer;

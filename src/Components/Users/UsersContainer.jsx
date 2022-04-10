@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import { toggleIsFetchingAC, toggleIsFollowingAC, unFollowTC, getUsersTC, followTC } from "../../redux/usersReducer";
 import Users from "./Users";
 import Preloader from "../Common/Preloader/Preloader";
-import withAuthRedirect from "../../hoc/withAuthRedirect";
 import { compose } from "redux";
+import { getCurrentPage, getIsFollowingInProgress, getIsFetching, getPageSize, getTotalUsersCount, getUsers } from "../../redux/selectors/usersSelectors";
 
 class UsersContainer extends React.Component{
 
@@ -34,12 +34,12 @@ class UsersContainer extends React.Component{
 }
 let mapStateToProps = (state) =>{
     return {
-        users:state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching,
-        isFollowingProgress: state.usersPage.followingInProgress
+        users:getUsers(state),
+        pageSize: getPageSize(state),
+        totalUsersCount: getTotalUsersCount(state),
+        currentPage: getCurrentPage(state),
+        isFetching: getIsFetching(state),
+        isFollowingProgress: getIsFollowingInProgress(state)
     }
 }
 export default compose(
@@ -50,6 +50,5 @@ export default compose(
         follow: followTC,
         unFollow: unFollowTC
     
-    }),
-    withAuthRedirect
+    })
 )(UsersContainer)
